@@ -1,11 +1,16 @@
 cask "monet" do
-  version "0.1.18"
-  sha256 "685569ca56d168d9de57c370852e616df94f1bc51643a6088bf39a9ffcfacf3a"
+  version "0.1.23"
+  sha256 "19e109c3b26aa0ed8328af53c92f48b939743d06b149d51203439e2e93995c63"
 
   url "https://github.com/zenolab124/monet/releases/download/v#{version}/Monet_#{version}_aarch64.dmg"
   name "Monet"
-  desc "Claude Code session manager and workbench"
+  desc "Mission Control for Claude Code"
   homepage "https://github.com/zenolab124/monet"
+
+  livecheck do
+    url "https://github.com/zenolab124/monet"
+    strategy :github_latest
+  end
 
   # Monet self-updates in-app (Tauri updater); brew upgrade must not fight it
   auto_updates true
@@ -30,6 +35,7 @@ cask "monet" do
     Monet is signed with a stable identity but not yet notarized by Apple.
     On first launch, right-click Monet.app → Open (once), or run:
       xattr -cr /Applications/Monet.app
+    Or install with: brew install --cask --no-quarantine monet
     Subsequent updates install silently in-app.
   EOS
 end
