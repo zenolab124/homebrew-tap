@@ -1,6 +1,6 @@
 cask "monet" do
-  version "1.0.3"
-  sha256 "99a45544abacad467e9d54abbecc8f42d717023d1f317e64e322f513e635f1ef"
+  version "1.0.4"
+  sha256 "d5d3d0d7f454ef12a4ccab3c23baecdd2e5c3cd120d3975ac9d37a722d1b489b"
 
   url "https://github.com/zenolab124/monet/releases/download/v#{version}/Monet_#{version}_aarch64.dmg"
   name "Monet"
