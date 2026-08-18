@@ -15,7 +15,7 @@ cask "monet" do
   # Monet self-updates in-app (Tauri updater); brew upgrade must not fight it
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Monet.app"
 
@@ -25,10 +25,10 @@ cask "monet" do
     "~/Library/Caches/io.github.zenolab124.monet",
     "~/Library/HTTPStorages/io.github.zenolab124.monet",
     "~/Library/LaunchAgents/io.github.zenolab124.monet.tray.plist",
+    "~/Library/LaunchAgents/io.github.zenolab124.monet.widget-updater.plist",
     "~/Library/Logs/io.github.zenolab124.monet",
     "~/Library/Preferences/io.github.zenolab124.monet.plist",
     "~/Library/Saved Application State/io.github.zenolab124.monet.savedState",
     "~/Library/WebKit/io.github.zenolab124.monet",
   ]
-
 end

@@ -1,12 +1,15 @@
 # zenolab124 Homebrew Tap
 
 ```bash
-brew tap zenolab124/tap
-brew install --cask monet
+brew install --cask zenolab124/tap/monet
 ```
 
-[Monet](https://github.com/zenolab124/monet) — Claude Code session manager and workbench.
+The fully qualified name makes Homebrew 6 trust only the Monet cask; no separate
+`brew trust` command is needed.
 
-> First launch requires a one-time Gatekeeper approval (right-click → Open, or `xattr -cr /Applications/Monet.app`). Updates are silent and in-app afterwards; `brew upgrade` intentionally skips this cask (`auto_updates`).
+[Monet](https://github.com/zenolab124/monet) is a multi-engine mission control
+for coding agents. Stable releases are signed with Developer ID and notarized by
+Apple, so the app opens normally after installation.
 
-<!-- 维护备忘:每次 Release publish 后同步 version + sha256(shasum -a 256 <dmg>)。 -->
+Monet updates itself in-app. Homebrew therefore treats the cask as auto-updating
+and does not replace it during a regular `brew upgrade`.
